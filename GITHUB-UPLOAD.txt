@@ -1,0 +1,1 @@
+Upload these files directly to the EXISTING GitHub repository root. Commit to main. Do not create an outer project folder. In the existing Render service add GEMINI_API_KEY as an environment variable. Build: pip install -r requirements.txt | Start: uvicorn server:app --host 0.0.0.0 --port $PORT
