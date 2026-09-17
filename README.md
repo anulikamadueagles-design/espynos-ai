@@ -1,4 +1,8 @@
-# ESPYNOS-AI
-ChatGPT-style AI assistant foundation with Gemini chat, coding workspace, DuckDuckGo search, image generation entry point, voice-ready architecture, files, assistant UI, memory-ready browser storage and sci-fi holographic interface.
-
-For production, keep the Gemini key server-side. Real accounts/cloud memory, authenticated media generation, payments, collaboration and distributed rendering need provider backends.
+# ESPYNOS-AI — Next Generation UI
+Upload these files directly to the root of the existing GitHub repository and commit to `main`.
+Render Web Service:
+Build: `pip install -r requirements.txt`
+Start: `uvicorn server:app --host 0.0.0.0 --port $PORT`
+Environment: `GEMINI_API_KEY` (required for chat)
+Optional: `GEMINI_MODEL`, `VIDEO_PROVIDER_URL`
+This version upgrades the frontend to a red/gold/blue/green neon sci-fi interface with a CSS holographic AI core, ChatGPT-style chat, coding lab, DuckDuckGo search, image generation, video-job interface, voice input, assistant tools, responsive mobile UI and local chat history.

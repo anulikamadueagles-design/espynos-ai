@@ -1,1 +1,88 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ESPYNOS-AI</title><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css"></head><body><aside><h2>◈ ESPYNOS</h2><button id="new">＋ New chat</button><button data-v="chat">◈ Chat</button><button data-v="code">⌘ Coding</button><button data-v="search">⌕ Web Search</button><button data-v="create">✦ Create</button><button data-v="files">▣ Files</button><button data-v="assistant">◉ Assistant</button><button data-v="settings">⚙ Settings</button><small>Created by David Kamsi Elvis<br>Vectors element tech</small></aside><main><header><button id="menu">☰</button><select id="model"><option>gemini-2.5-flash</option><option>gemini-2.5-pro</option></select><span>ESPYNOS-AI</span> 🎙</header><section id="chat" class="view on"><div class="hero"><div class="holo"><div class="core">E<span>AI</span></div><i></i><i></i><i></i></div><h1>How can I help you?</h1><p>Chat, code, research, create and automate.</p></div><div id="msgs"></div><form id="form"><input id="prompt" placeholder="Message ESPYNOS-AI..." required><button>➤</button></form></section><section id="code" class="view"><h1>⌘ Coding Workspace</h1><textarea id="codebox">console.log("Hello from ESPYNOS-AI");</textarea><button id="run">▶ Run</button><pre id="out"></pre></section><section id="search" class="view"><h1>⌕ Web Search</h1><form id="sf"><input id="q" placeholder="Search with DuckDuckGo" required><button>Search</button></form><div id="results"></div></section><section id="create" class="view"><h1>✦ Creation Studio</h1><textarea id="ip" placeholder="Describe an image..."></textarea><button id="img">Generate Image</button><div id="image"></div><hr><textarea id="vp" placeholder="Describe a video..."></textarea><button id="vid">Generate Video</button><div id="video"></div></section><section id="files" class="view"><h1>▣ Files</h1><input type="file" id="fi" multiple><div id="fl"></div></section><section id="assistant" class="view"><div class="card"><h1>◉ AI Assistant</h1><p>Tasks, notes, reminders, calendar and email workflows.</p></div></section><section id="settings" class="view"><h1>⚙ Settings</h1><div class="card">AI backend: <b id="status">checking…</b><p>Keep GEMINI_API_KEY on the server, never in public JavaScript.</p></div></section></main><script src="/script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050008">
+<title>ESPYNOS-AI — Next Generation Intelligence</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="aurora"></div>
+<header class="topbar">
+  <div class="brand"><span class="brand-orb">E</span><span>ESPYNOS<span class="hot">-AI</span></span></div>
+  <div class="top-actions">
+    <button class="chip" id="newChat">＋ New</button>
+    <button class="chip" id="themeBtn">◐ Theme</button>
+    <button class="chip" id="settingsBtn">⚙ Settings</button>
+  </div>
+</header>
+
+<main class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-title">COMMAND CENTER</div>
+    <button class="nav active" data-target="chat">◉ AI Chat</button>
+    <button class="nav" data-target="code">⌘ Coding Lab</button>
+    <button class="nav" data-target="search">⌕ Web Search</button>
+    <button class="nav" data-target="media">✦ Media Studio</button>
+    <button class="nav" data-target="assistant">⚡ Assistant</button>
+    <div class="side-card">
+      <div class="mini-orb"></div>
+      <b>ESPYNOS CORE</b>
+      <span>ONLINE · READY</span>
+    </div>
+    <div class="creator">Created by <b>David Kamsi Elvis</b><br><span>Vectors element tech</span></div>
+  </aside>
+
+  <section class="workspace">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">NEXT-GENERATION AI SYSTEM</div>
+        <h1>Meet <span>ESPYNOS-AI</span></h1>
+        <p>Chat, code, search, create and control your AI workspace from one futuristic interface.</p>
+        <div class="status-row"><i></i> CORE ONLINE <em>•</em> MULTIMODAL READY <em>•</em> WEB CONNECTED</div>
+      </div>
+      <div class="holo-wrap" aria-label="ESPYNOS holographic AI core">
+        <div class="holo-grid"></div><div class="holo-ring ring1"></div><div class="holo-ring ring2"></div>
+        <div class="holo-ring ring3"></div><div class="holo-core"><div class="core-face">E</div><span>ESPYNOS</span></div>
+        <div class="scan"></div><div class="float f1">AI CORE</div><div class="float f2">NEURAL LINK</div><div class="float f3">ONLINE</div>
+      </div>
+    </section>
+
+    <section class="panel active-panel" id="chat">
+      <div class="panel-head"><div><small>CONVERSATION</small><h2>AI Chat</h2></div>
+        <select id="model"><option value="gemini-2.5-flash">Gemini Flash</option><option value="gemini-2.5-pro">Gemini Pro</option></select>
+      </div>
+      <div class="messages" id="messages"><div class="welcome"><div class="welcome-icon">✦</div><h3>How can I help?</h3><p>Ask ESPYNOS-AI anything, request code, research a topic, or create media.</p><div class="suggestions"><button>Build a website</button><button>Explain quantum computing</button><button>Search today's technology news</button></div></div></div>
+      <form class="composer" id="chatForm"><button type="button" class="round" id="attachBtn">＋</button><textarea id="prompt" rows="1" placeholder="Message ESPYNOS-AI..."></textarea><button type="button" class="round" id="micBtn">🎙</button><button class="send" type="submit">➤</button></form>
+      <input type="file" id="fileInput" hidden multiple>
+    </section>
+
+    <section class="panel" id="code"><div class="panel-head"><div><small>DEVELOPER MODE</small><h2>Coding Lab</h2></div><button class="primary" id="runCode">▶ Run Preview</button></div>
+      <div class="code-grid"><textarea id="codeInput" spellcheck="false" placeholder="Write HTML, CSS or JavaScript here..."></textarea><iframe id="preview" title="Code preview"></iframe></div>
+      <div class="tool-row"><button class="tool" data-code="html">HTML</button><button class="tool" data-code="js">JavaScript</button><button class="tool" data-code="python">Python</button><button class="tool" data-code="explain">Explain Code</button><button class="tool" data-code="debug">Debug</button></div>
+    </section>
+
+    <section class="panel" id="search"><div class="panel-head"><div><small>LIVE INTERNET</small><h2>Web Search</h2></div></div>
+      <form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Search the web with DuckDuckGo..."><button class="primary">SEARCH</button></form>
+      <div id="searchResults" class="results"></div>
+    </section>
+
+    <section class="panel" id="media"><div class="panel-head"><div><small>CREATIVE ENGINE</small><h2>Media Studio</h2></div></div>
+      <div class="media-grid">
+        <div class="media-card"><span>◈</span><h3>Image Generation</h3><p>Create images from prompts.</p><input id="imagePrompt" placeholder="Describe an image..."><button class="primary" id="imageBtn">GENERATE IMAGE</button><div id="imageOut"></div></div>
+        <div class="media-card"><span>◉</span><h3>Video Studio</h3><p>Provider-ready video generation workspace with prompt, duration and aspect controls.</p><input id="videoPrompt" placeholder="Describe your video..."><div class="two"><select id="ratio"><option>16:9</option><option>9:16</option><option>1:1</option></select><select id="duration"><option>5 seconds</option><option>10 seconds</option></select></div><button class="primary" id="videoBtn">CREATE VIDEO JOB</button><div id="videoOut"></div></div>
+        <div class="media-card"><span>♫</span><h3>Voice & Audio</h3><p>Voice capture and AI-ready audio workspace.</p><button class="tool" id="voiceBtn">🎙 Record Voice</button><div id="voiceOut"></div></div>
+      </div>
+    </section>
+
+    <section class="panel" id="assistant"><div class="panel-head"><div><small>PRODUCTIVITY</small><h2>AI Assistant</h2></div></div>
+      <div class="assistant-grid"><button class="assistant-card">⏰<b>Reminders</b><span>Create a reminder</span></button><button class="assistant-card">📝<b>Notes</b><span>Quick notes</span></button><button class="assistant-card">📚<b>Study Mode</b><span>Learn with ESPYNOS</span></button><button class="assistant-card">🌐<b>Translate</b><span>Translate text</span></button><button class="assistant-card">📄<b>Documents</b><span>Work with files</span></button><button class="assistant-card">🧠<b>Memory</b><span>Conversation memory</span></button></div>
+    </section>
+  </section>
+</main>
+
+<div class="modal" id="settings"><div class="modal-box"><button class="close" id="closeSettings">×</button><h2>ESPYNOS Settings</h2><label>Interface glow<input type="range" id="glow" min="40" max="100" value="85"></label><label>Animation<select id="animation"><option>High</option><option>Balanced</option><option>Low</option></select></label><p>AI keys stay server-side. Your browser never needs to contain the Gemini secret.</p></div></div>
+<script src="/script.js"></script>
+</body></html>

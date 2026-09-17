@@ -1,1 +1,9 @@
-{"name":"ESPYNOS-AI","short_name":"ESPYNOS","start_url":"/","display":"standalone","background_color":"#060812","theme_color":"#060812"}
+{
+  "name": "ESPYNOS-AI",
+  "short_name": "ESPYNOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030007",
+  "theme_color": "#050008",
+  "description": "Next-generation AI workspace"
+}
