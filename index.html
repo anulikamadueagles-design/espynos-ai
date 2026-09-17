@@ -1,88 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050008">
-<title>ESPYNOS-AI — Next Generation Intelligence</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="stylesheet" href="/style.css">
-</head>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020005"><title>ESPYNOS-AI | Ultra Holographic</title><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css"></head>
 <body>
-<div class="aurora"></div>
-<header class="topbar">
-  <div class="brand"><span class="brand-orb">E</span><span>ESPYNOS<span class="hot">-AI</span></span></div>
-  <div class="top-actions">
-    <button class="chip" id="newChat">＋ New</button>
-    <button class="chip" id="themeBtn">◐ Theme</button>
-    <button class="chip" id="settingsBtn">⚙ Settings</button>
-  </div>
-</header>
-
-<main class="app">
-  <aside class="sidebar" id="sidebar">
-    <div class="side-title">COMMAND CENTER</div>
-    <button class="nav active" data-target="chat">◉ AI Chat</button>
-    <button class="nav" data-target="code">⌘ Coding Lab</button>
-    <button class="nav" data-target="search">⌕ Web Search</button>
-    <button class="nav" data-target="media">✦ Media Studio</button>
-    <button class="nav" data-target="assistant">⚡ Assistant</button>
-    <div class="side-card">
-      <div class="mini-orb"></div>
-      <b>ESPYNOS CORE</b>
-      <span>ONLINE · READY</span>
-    </div>
-    <div class="creator">Created by <b>David Kamsi Elvis</b><br><span>Vectors element tech</span></div>
-  </aside>
-
-  <section class="workspace">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">NEXT-GENERATION AI SYSTEM</div>
-        <h1>Meet <span>ESPYNOS-AI</span></h1>
-        <p>Chat, code, search, create and control your AI workspace from one futuristic interface.</p>
-        <div class="status-row"><i></i> CORE ONLINE <em>•</em> MULTIMODAL READY <em>•</em> WEB CONNECTED</div>
-      </div>
-      <div class="holo-wrap" aria-label="ESPYNOS holographic AI core">
-        <div class="holo-grid"></div><div class="holo-ring ring1"></div><div class="holo-ring ring2"></div>
-        <div class="holo-ring ring3"></div><div class="holo-core"><div class="core-face">E</div><span>ESPYNOS</span></div>
-        <div class="scan"></div><div class="float f1">AI CORE</div><div class="float f2">NEURAL LINK</div><div class="float f3">ONLINE</div>
-      </div>
-    </section>
-
-    <section class="panel active-panel" id="chat">
-      <div class="panel-head"><div><small>CONVERSATION</small><h2>AI Chat</h2></div>
-        <select id="model"><option value="gemini-2.5-flash">Gemini Flash</option><option value="gemini-2.5-pro">Gemini Pro</option></select>
-      </div>
-      <div class="messages" id="messages"><div class="welcome"><div class="welcome-icon">✦</div><h3>How can I help?</h3><p>Ask ESPYNOS-AI anything, request code, research a topic, or create media.</p><div class="suggestions"><button>Build a website</button><button>Explain quantum computing</button><button>Search today's technology news</button></div></div></div>
-      <form class="composer" id="chatForm"><button type="button" class="round" id="attachBtn">＋</button><textarea id="prompt" rows="1" placeholder="Message ESPYNOS-AI..."></textarea><button type="button" class="round" id="micBtn">🎙</button><button class="send" type="submit">➤</button></form>
-      <input type="file" id="fileInput" hidden multiple>
-    </section>
-
-    <section class="panel" id="code"><div class="panel-head"><div><small>DEVELOPER MODE</small><h2>Coding Lab</h2></div><button class="primary" id="runCode">▶ Run Preview</button></div>
-      <div class="code-grid"><textarea id="codeInput" spellcheck="false" placeholder="Write HTML, CSS or JavaScript here..."></textarea><iframe id="preview" title="Code preview"></iframe></div>
-      <div class="tool-row"><button class="tool" data-code="html">HTML</button><button class="tool" data-code="js">JavaScript</button><button class="tool" data-code="python">Python</button><button class="tool" data-code="explain">Explain Code</button><button class="tool" data-code="debug">Debug</button></div>
-    </section>
-
-    <section class="panel" id="search"><div class="panel-head"><div><small>LIVE INTERNET</small><h2>Web Search</h2></div></div>
-      <form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Search the web with DuckDuckGo..."><button class="primary">SEARCH</button></form>
-      <div id="searchResults" class="results"></div>
-    </section>
-
-    <section class="panel" id="media"><div class="panel-head"><div><small>CREATIVE ENGINE</small><h2>Media Studio</h2></div></div>
-      <div class="media-grid">
-        <div class="media-card"><span>◈</span><h3>Image Generation</h3><p>Create images from prompts.</p><input id="imagePrompt" placeholder="Describe an image..."><button class="primary" id="imageBtn">GENERATE IMAGE</button><div id="imageOut"></div></div>
-        <div class="media-card"><span>◉</span><h3>Video Studio</h3><p>Provider-ready video generation workspace with prompt, duration and aspect controls.</p><input id="videoPrompt" placeholder="Describe your video..."><div class="two"><select id="ratio"><option>16:9</option><option>9:16</option><option>1:1</option></select><select id="duration"><option>5 seconds</option><option>10 seconds</option></select></div><button class="primary" id="videoBtn">CREATE VIDEO JOB</button><div id="videoOut"></div></div>
-        <div class="media-card"><span>♫</span><h3>Voice & Audio</h3><p>Voice capture and AI-ready audio workspace.</p><button class="tool" id="voiceBtn">🎙 Record Voice</button><div id="voiceOut"></div></div>
-      </div>
-    </section>
-
-    <section class="panel" id="assistant"><div class="panel-head"><div><small>PRODUCTIVITY</small><h2>AI Assistant</h2></div></div>
-      <div class="assistant-grid"><button class="assistant-card">⏰<b>Reminders</b><span>Create a reminder</span></button><button class="assistant-card">📝<b>Notes</b><span>Quick notes</span></button><button class="assistant-card">📚<b>Study Mode</b><span>Learn with ESPYNOS</span></button><button class="assistant-card">🌐<b>Translate</b><span>Translate text</span></button><button class="assistant-card">📄<b>Documents</b><span>Work with files</span></button><button class="assistant-card">🧠<b>Memory</b><span>Conversation memory</span></button></div>
-    </section>
-  </section>
-</main>
-
-<div class="modal" id="settings"><div class="modal-box"><button class="close" id="closeSettings">×</button><h2>ESPYNOS Settings</h2><label>Interface glow<input type="range" id="glow" min="40" max="100" value="85"></label><label>Animation<select id="animation"><option>High</option><option>Balanced</option><option>Low</option></select></label><p>AI keys stay server-side. Your browser never needs to contain the Gemini secret.</p></div></div>
-<script src="/script.js"></script>
-</body></html>
+<div class="space"></div><div class="stars"></div><div class="energy e-red"></div><div class="energy e-blue"></div><div class="energy e-green"></div>
+<header><div class="logo"><b>◈</b> ESPYNOS<span>-AI</span></div><div class="header-buttons"><button id="new">＋ NEW CHAT</button><button id="settings">⚙</button></div></header>
+<div class="layout">
+<aside><div class="label">ESPYNOS COMMAND</div><button class="nav active" data-page="chat">◉ AI CHAT</button><button class="nav" data-page="code">⌘ CODING LAB</button><button class="nav" data-page="search">⌕ WEB SEARCH</button><button class="nav" data-page="media">✦ MEDIA STUDIO</button><button class="nav" data-page="assistant">⚡ AI ASSISTANT</button><div class="core-mini"><div class="mini-ring"></div><b>CORE ONLINE</b><small>NEURAL SYSTEM ACTIVE</small></div><footer>Created by <strong>David Kamsi Elvis</strong><br><i>Vectors element tech</i></footer></aside>
+<main>
+<section class="hero">
+<div class="copy"><div class="over">◆ ULTRA NEURAL INTELLIGENCE ◆</div><h1>ESPYNOS<span>-AI</span></h1><p>A next-generation multimodal AI command center for conversation, coding, research and creative intelligence.</p><div class="lights"><b>● RED ENERGY</b><b>● GOLD CORE</b><b>● BLUE LINK</b><b>● GREEN NEURAL</b></div></div>
+<div class="hologram">
+<div class="beam"></div><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+<div class="hud hud1">NEURAL<br><strong>98.7%</strong></div><div class="hud hud2">CORE<br><strong>ONLINE</strong></div><div class="hud hud3">LINK<br><strong>ACTIVE</strong></div>
+<div class="ai-orb"><div class="face">E</div><div class="scanline"></div></div><div class="holo-text">ESPYNOS CORE</div></div>
+</section>
+<section class="panel active" id="chat"><div class="head"><div><small>CONVERSATION ENGINE</small><h2>AI Chat</h2></div><select id="model"><option>gemini-2.5-flash</option><option>gemini-2.5-pro</option></select></div><div class="messages" id="messages"><div class="welcome">✦<h3>ESPYNOS is online</h3><p>Ask anything. Build anything. Explore anything.</p><div><button class="suggest">Build a futuristic website</button><button class="suggest">Explain AI to me</button></div></div></div><form id="form"><button type="button" id="attach">＋</button><textarea id="prompt" placeholder="Message ESPYNOS-AI..."></textarea><button type="button" id="mic">🎙</button><button class="send">➤</button></form><input id="files" type="file" multiple hidden></section>
+<section class="panel" id="code"><div class="head"><div><small>DEVELOPER MATRIX</small><h2>Coding Lab</h2></div><button class="rainbow" id="run">▶ RUN</button></div><div class="code"><textarea id="editor" placeholder="// Write HTML/CSS/JS here"></textarea><iframe id="preview"></iframe></div></section>
+<section class="panel" id="search"><div class="head"><div><small>INTERNET INTELLIGENCE</small><h2>DuckDuckGo Web Search</h2></div></div><form id="searchForm"><input id="query" placeholder="Search the web..."><button class="rainbow">SEARCH</button></form><div id="results"></div></section>
+<section class="panel" id="media"><div class="head"><div><small>CREATIVE MATRIX</small><h2>Media Studio</h2></div></div><div class="cards"><article><b>◈</b><h3>AI Images</h3><p>Generate visual concepts from prompts.</p><input id="imagePrompt" placeholder="Describe your image"><button class="rainbow" id="image">GENERATE</button><div id="imageOut"></div></article><article><b>◉</b><h3>AI Video</h3><p>Video job interface ready for a provider.</p><input id="videoPrompt" placeholder="Describe your video"><button class="rainbow" id="video">CREATE JOB</button><div id="videoOut"></div></article><article><b>♫</b><h3>Voice</h3><p>Speech input and audio workspace.</p><button class="rainbow" id="voice">🎙 VOICE INPUT</button><div id="voiceOut"></div></article></div></section>
+<section class="panel" id="assistant"><div class="head"><div><small>PRODUCTIVITY MATRIX</small><h2>AI Assistant</h2></div></div><div class="cards assistant"><article>⏰<h3>Reminders</h3><p>Create tasks and reminders.</p></article><article>🧠<h3>Memory</h3><p>Conversation-aware workspace.</p></article><article>📚<h3>Study Mode</h3><p>Learn and practice with AI.</p></article><article>📄<h3>Documents</h3><p>Work with uploaded files.</p></article></div></section>
+</main></div>
+<div id="modal"><div><button id="close">×</button><h2>ESPYNOS SYSTEM</h2><p>Ultra holographic interface enabled.</p></div></div>
+<script src="/script.js"></script></body></html>
